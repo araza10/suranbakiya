@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 28, 2011 3:01:59 PM by Hibernate Tools 3.4.0.Beta1 -->
+<hibernate-mapping>
+ <class catalog="tbreach2"
+  name="org.irdresearch.tbreach2.shared.model.Gp" table="gp">
+  <id name="gpid" type="string">
+   <column length="12" name="GPID"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="qualification" type="string">
+   <column length="10" name="Qualification"/>
+  </property>
+  <property generated="never" lazy="false" name="specialization" type="string">
+   <column length="100" name="Specialization"/>
+  </property>
+  <property generated="never" lazy="false" name="workplaceId" type="string">
+   <column length="50" name="WorkplaceID"/>
+  </property>
+  <property generated="never" lazy="false" name="dateRegistered" type="timestamp">
+   <column length="10" name="DateRegistered"/>
+  </property>
+ </class>
+</hibernate-mapping>

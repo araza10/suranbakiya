@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 1, 2012 4:16:09 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.irdresearch.tbreach2.shared.model.Location" table="location" catalog="tbreach2">
+        <id name="locationId" type="java.lang.String">
+            <column name="LocationID" />
+            <generator class="assigned" />
+        </id>
+        <property name="locationName" type="java.lang.String">
+            <column name="LocationName" />
+        </property>
+        <property name="locationType" type="java.lang.String">
+            <column name="LocationType" />
+        </property>
+        <property name="cellPhone1" type="java.lang.String">
+            <column name="CellPhone1" />
+        </property>
+        <property name="cellPhone2" type="java.lang.String">
+            <column name="CellPhone2" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 28, 2011 3:01:59 PM by Hibernate Tools 3.4.0.Beta1 -->
+<hibernate-mapping>
+    <class name="org.irdresearch.tbreach2.shared.model.Patient" table="patient" catalog="tbreach2">
+        <id name="patientId" type="string">
+            <column name="PatientID" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="chwid" type="string">
+            <column name="CHWID" length="12" />
+        </property>
+        <property name="tswid" type="string">
+            <column name="TSWID" length="12" />
+        </property>
+        <property name="gpid" type="string">
+            <column name="GPID" length="12" />
+        </property>
+        <property name="laboratoryId" type="string">
+            <column name="LaboratoryID" length="12" />
+        </property>
+        <property name="mrno" type="string">
+            <column name="MRNo" length="12">
+                <comment>Case/File/Patient/Medical Record No. used in treatment center.</comment>
+            </column>
+        </property>
+        <property name="externalMrno" type="string">
+            <column name="ExternalMRNo" length="12">
+                <comment>Case/File/Patient No. used outside treatment center (District level etc.)</comment>
+            </column>
+        </property>
+        <property name="weight" type="java.lang.Float">
+            <column name="Weight" precision="12" scale="0" />
+        </property>
+        <property name="height" type="java.lang.Float">
+            <column name="Height" precision="12" scale="0" />
+        </property>
+        <property name="bloodGroup" type="string">
+            <column name="BloodGroup" length="5">
+                <comment>BLOOD_GROUP from Definition</comment>
+            </column>
+        </property>
+        <property name="dateRegistered" type="timestamp">
+            <column name="DateRegistered" length="19" />
+        </property>
+        <property name="treatmentCenter" type="string">
+            <column name="TreatmentCenter" length="12">
+                <comment>From Location</comment>
+            </column>
+        </property>
+        <property name="diseaseSuspected" type="java.lang.Boolean">
+            <column name="DiseaseSuspected" />
+        </property>
+        <property name="diseaseConfirmed" type="java.lang.Boolean">
+            <column name="DiseaseConfirmed" />
+        </property>
+        <property name="diseaseCategory" type="string">
+            <column name="DiseaseCategory" length="12">
+                <comment>DISEASE_CATEGORY from Definition</comment>
+            </column>
+        </property>
+        <property name="diseaseSite" type="string">
+            <column name="DiseaseSite" length="50" />
+        </property>
+        <property name="severity" type="string">
+            <column name="Severity" length="12">
+                <comment>SEVERITY from Definition</comment>
+            </column>
+        </property>
+        <property name="regimen" type="string">
+            <column name="Regimen" length="12">
+                <comment>REGIMEN from Definition</comment>
+            </column>
+        </property>
+        <property name="doseCombination" type="java.lang.Float">
+            <column name="DoseCombination" precision="12" scale="0" />
+        </property>
+        <property name="streptomycin" type="java.lang.Integer">
+            <column name="Streptomycin" />
+        </property>
+        <property name="treatmentSupporter" type="string">
+            <column name="TreatmentSupporter" length="100" />
+        </property>
+        <property name="treatmentSupporterContact" type="string">
+            <column name="TreatmentSupporterContact" length="20" />
+        </property>
+        <property name="treatmentSupporterRelationship" type="string">
+            <column name="TreatmentSupporterRelationship" length="12" />
+        </property>
+        <property name="treatmentPhase" type="string">
+            <column name="TreatmentPhase" length="12">
+                <comment>TREATMENT_PHASE from Definition</comment>
+            </column>
+        </property>
+        <property name="patientStatus" type="string">
+            <column name="PatientStatus" length="12">
+                <comment>PATIENT_STATUS from Definition</comment>
+            </column>
+        </property>
+        <property name="patientType" type="string">
+            <column name="PatientType" length="12">
+                <comment>PATIENT_TYPE from Definition</comment>
+            </column>
+        </property>
+        <property name="diseaseHistory" type="string">
+            <column name="DiseaseHistory" length="50" />
+        </property>
+        <property name="treatedPreviously" type="java.lang.Boolean">
+            <column name="TreatedPreviously" />
+        </property>
+        <property name="previousTreatmentDuration" type="java.lang.Integer">
+            <column name="PreviousTreatmentDuration" />
+        </property>
+        <property name="completedPreviousTreatment" type="java.lang.Boolean">
+            <column name="CompletedPreviousTreatment" />
+        </property>
+        <property name="fullDescription" type="string">
+            <column name="FullDescription" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

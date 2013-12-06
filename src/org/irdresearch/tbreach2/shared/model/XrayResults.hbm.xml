@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 28, 2011 3:01:59 PM by Hibernate Tools 3.4.0.Beta1 -->
+<hibernate-mapping>
+    <class name="org.irdresearch.tbreach2.shared.model.XrayResults" table="xrayresults" catalog="tbreach2">
+        <id name="patientId" type="string">
+            <column name="PatientID" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="xrayOrderedBy" type="string">
+            <column name="XRayOrderedBy" length="12" />
+        </property>
+        <property name="xrayLabId" type="string">
+            <column name="XRayLabID" length="12" />
+        </property>
+        <property name="xrayDate" type="timestamp">
+            <column name="XRayDate" length="19" />
+        </property>
+        <property name="dateReported" type="timestamp">
+            <column name="DateReported" length="19" />
+        </property>
+        <property name="xrayResult" type="string">
+            <column name="XRayResult" length="50" />
+        </property>
+        <property name="testedBy" type="string">
+            <column name="TestedBy" length="100">
+                <comment>Name of Laboratory Technician</comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="Remarks" />
+        </property>
+    </class>
+</hibernate-mapping>

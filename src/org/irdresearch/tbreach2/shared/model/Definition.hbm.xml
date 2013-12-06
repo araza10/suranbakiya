@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 28, 2011 3:01:59 PM by Hibernate Tools 3.4.0.Beta1 -->
+<hibernate-mapping>
+    <class name="org.irdresearch.tbreach2.shared.model.Definition" table="definition" catalog="tbreach2">
+        <composite-id name="id" class="org.irdresearch.tbreach2.shared.model.DefinitionId">
+            <key-property name="definitionType" type="string">
+                <column name="DefinitionType" length="50" />
+            </key-property>
+            <key-property name="definitionKey" type="string">
+                <column name="DefinitionKey" length="12" />
+            </key-property>
+        </composite-id>
+        <property name="value" type="string">
+            <column name="Value" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.irdresearch.tbreach2.shared.model.Users" table="users" catalog="tbreach2">
+        <id name="pid" type="string">
+            <column name="PID" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="userName" type="string">
+            <column name="UserName" length="20" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="Status" length="15" not-null="true">
+                <comment>USER_STATUS from Definition</comment>
+            </column>
+        </property>
+        <property name="role" type="string">
+            <column name="Role" length="20" not-null="true">
+                <comment>USER_ROLE from Definition</comment>
+            </column>
+        </property>
+                <property name="user_id" type="string">
+            <column name="user_id" length="12">
+                </column>
+        </property>
+                        <property name="firstName" type="string">
+            <column name="firstName" length="20">
+                </column>
+        </property>
+                                <property name="lastName" type="string">
+            <column name="lastName" length="20">
+                </column>
+        </property>
+    </class>
+</hibernate-mapping>

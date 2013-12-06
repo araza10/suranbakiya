@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 28, 2011 3:01:59 PM by Hibernate Tools 3.4.0.Beta1 -->
+<hibernate-mapping>
+    <class name="org.irdresearch.tbreach2.shared.model.Sms" table="sms" catalog="tbreach2">
+        <id name="smsid" type="java.lang.Integer">
+            <column name="SMSID" />
+            <generator class="identity" />
+        </id>
+        <property name="targetNumber" type="string">
+            <column name="TargetNumber" length="20" not-null="true">
+                <comment>Phone number on which SMS is to be delivered</comment>
+            </column>
+        </property>
+        <property name="messageText" type="string">
+            <column name="MessageText">
+                <comment>Message body of the SMS</comment>
+            </column>
+        </property>
+        <property name="dueDateTime" type="timestamp">
+            <column name="DueDateTime" length="19" not-null="true">
+                <comment>Date and Time when SMS is to be sent</comment>
+            </column>
+        </property>
+        <property name="sentDateTime" type="timestamp">
+            <column name="SentDateTime" length="19">
+                <comment>Date and Time after the SMS was sent</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="Status" length="10">
+                <comment>PENDING, SENT, FAILED, SKIPPED</comment>
+            </column>
+        </property>
+        <property name="errorMessage" type="string">
+            <column name="ErrorMessage" />
+        </property>
+        <property name="failureCause" type="string">
+            <column name="FailureCause" />
+        </property>
+    </class>
+</hibernate-mapping>

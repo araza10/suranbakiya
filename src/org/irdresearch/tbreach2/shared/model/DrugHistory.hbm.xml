@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-Sep-2011 12:25:00 by Hibernate Tools 3.4.0.Beta1 -->
+<hibernate-mapping>
+    <class name="org.irdresearch.tbreach2.shared.model.DrugHistory" table="drughistory" catalog="tbreach2">
+        <composite-id name="id" class="org.irdresearch.tbreach2.shared.model.DrugHistoryId">
+            <key-property name="patientId" type="string">
+                <column name="PatientID" length="12" />
+            </key-property>
+            <key-property name="dispensalNo" type="int">
+                <column name="DispensalNo" />
+            </key-property>
+        </composite-id>
+        <property name="dateDispensed" type="timestamp">
+            <column name="DateDispensed" length="19" />
+        </property>
+        <property name="chwid" type="string">
+            <column name="CHWID" length="12" />
+        </property>
+        <property name="locationDeliveredTo" type="string">
+            <column name="LocationDeliveredTo" length="12">
+                <comment>LocationType from Definition (NOT the Location IDs)</comment>
+            </column>
+        </property>
+        <property name="regimen" type="string">
+            <column name="Regimen" length="12" />
+        </property>
+        <property name="pillsQuotaDelivered" type="java.lang.Integer">
+            <column name="PillsQuotaDelivered">
+                <comment>No. of days worth of pills</comment>
+            </column>
+        </property>
+        <property name="pillsDelivered" type="java.lang.Integer">
+            <column name="PillsDelivered">
+                <comment>No. of pills delivered</comment>
+            </column>
+        </property>
+        <property name="pillsRemaining" type="java.lang.Integer">
+            <column name="PillsRemaining">
+                <comment>No. of pills remaining</comment>
+            </column>
+        </property>
+        <property name="pillsLost" type="java.lang.Integer">
+            <column name="PillsLost">
+                <comment>No. of pills lost</comment>
+            </column>
+        </property>
+        <property name="streptomycinQuotaDelivered" type="java.lang.Integer">
+            <column name="StreptomycinQuotaDelivered">
+                <comment>No. of days worth of Streptomycin syringes</comment>
+            </column>
+        </property>
+        <property name="streptomycinDelivered" type="java.lang.Integer">
+            <column name="StreptomycinDelivered">
+                <comment>No. of syringes delivered</comment>
+            </column>
+        </property>
+        <property name="streptomycinRemaining" type="java.lang.Integer">
+            <column name="StreptomycinRemaining">
+                <comment>No. syringes remaining</comment>
+            </column>
+        </property>
+        <property name="streptomycinLost" type="java.lang.Integer">
+            <column name="StreptomycinLost">
+                <comment>No. of syringes lost</comment>
+            </column>
+        </property>
+        <property name="pillContainerShown" type="java.lang.Boolean">
+            <column name="PillContainerShown" />
+        </property>
+        <property name="emptyStreptomycinCollected" type="java.lang.Boolean">
+            <column name="EmptyStreptomycinCollected" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="Remarks" />
+        </property>
+    </class>
+</hibernate-mapping>

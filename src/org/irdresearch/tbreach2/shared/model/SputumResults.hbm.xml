@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 28, 2011 3:58:51 PM by Hibernate Tools 3.4.0.Beta1 -->
+<hibernate-mapping>
+    <class name="org.irdresearch.tbreach2.shared.model.SputumResults" table="sputumresults" catalog="tbreach2">
+        <id name="sputumOrderNo" type="int">
+            <column name="SputumOrderNo" />
+            <generator class="assigned" />
+        </id>
+        <property name="patientId" type="string">
+            <column name="PatientID" length="12" not-null="true" />
+        </property>
+<!--        <property name="sputumId" type="int">
+            <column name="SputumID" not-null="true" />
+        </property>
+        <property name="sputumLabId" type="string">
+            <column name="SputumLabID" length="12" />
+        </property>
+        <property name="month" type="int">
+            <column name="Month" not-null="true" />
+        </property>
+        <property name="smearOrderedBy" type="string">
+            <column name="SmearOrderedBy" length="12" />
+        </property>
+         <property name="smearOrderDate" type="timestamp">
+            <column name="SmearOrderDate" length="19" />
+        </property>
+        <property name="instructionsGiven" type="java.lang.Boolean">
+            <column name="InstructionsGiven" />
+        </property>
+        <property name="sputumProduced" type="string">
+            <column name="SputumProduced" length="12" />
+        </property>
+        <property name="sputumQuality" type="string">
+            <column name="SputumQuality" length="12" />
+        </property>
+        <property name="smearTestDone" type="java.lang.Boolean">
+            <column name="SmearTestDone" />
+        </property>
+ -->        <property name="dateSmearTested" type="timestamp">
+            <column name="DateSmearTested" length="19" />
+        </property>
+        <property name="smearResult" type="string">
+            <column name="SmearResult" length="12" />
+        </property>
+                <property name="smearResult2" type="string">
+            <column name="SmearResult2" length="12" />
+        </property>
+                <property name="smearResult3" type="string">
+            <column name="SmearResult3" length="12" />
+        </property>
+                <property name="labNumber" type="int">
+            <column name="LabNumber" length="12" />
+        </property>
+               <property name="treatmentFacility" type="string">
+            <column name="TreatmentFacility" length="30" />
+        </property>
+<!--         <property name="smearEnteredBy" type="string">
+            <column name="SmearEnteredBy" length="12" />
+        </property>
+        <property name="geneXpertOrderedBy" type="string">
+            <column name="GeneXpertOrderedBy" length="12" />
+        </property>
+        <property name="geneXpertOrderDate" type="timestamp">
+            <column name="GeneXpertOrderDate" length="19" />
+        </property>
+        <property name="geneXpertTestDone" type="java.lang.Boolean">
+            <column name="GeneXpertTestDone" />
+        </property>
+        <property name="dateGeneXpertTested" type="timestamp">
+            <column name="DateGeneXpertTested" length="19" />
+        </property>
+        <property name="geneXpertResult" type="string">
+            <column name="GeneXpertResult" length="30" />
+        </property>
+        <property name="geneXpertResistance" type="string">
+            <column name="GeneXpertResistance" length="30" />
+        </property>
+        <property name="geneXpertEnteredBy" type="string">
+            <column name="GeneXpertEnteredBy" length="12" />
+        </property>
+        <property name="details" type="string">
+            <column name="Details" />
+        </property>
+ -->    </class>
+</hibernate-mapping>

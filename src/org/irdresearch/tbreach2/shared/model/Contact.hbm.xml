@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 28, 2011 3:01:59 PM by Hibernate Tools 3.4.0.Beta1 -->
+<hibernate-mapping>
+    <class name="org.irdresearch.tbreach2.shared.model.Contact" table="contact" catalog="tbreach2">
+        <id name="pid" type="string">
+            <column name="PID" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="addressHouse" type="string">
+            <column name="AddressHouse" length="50" />
+        </property>
+        <property name="addressStreet" type="string">
+            <column name="AddressStreet" length="50" />
+        </property>
+        <property name="addressSector" type="string">
+            <column name="AddressSector" length="50" />
+        </property>
+        <property name="addressColony" type="string">
+            <column name="AddressColony" length="50" />
+        </property>
+        <property name="addressTown" type="string">
+            <column name="AddressTown" length="50">
+                <comment>State or Province</comment>
+            </column>
+        </property>
+        <property name="addressUc" type="string">
+            <column name="AddressUC" length="50" />
+        </property>
+        <property name="addressLandMark" type="string">
+            <column name="AddressLandMark">
+                <comment>Nearest location(s) to the Address</comment>
+            </column>
+        </property>
+        <property name="city" type="string">
+            <column name="City" length="50" />
+        </property>
+        <property name="country" type="string">
+            <column name="Country" length="50" />
+        </property>
+        <property name="region" type="string">
+            <column name="Region" length="50" />
+        </property>
+        <property name="phone" type="string">
+            <column name="Phone" length="20" />
+        </property>
+        <property name="phoneOwner" type="string">
+            <column name="PhoneOwner" length="50" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="Mobile" length="20" />
+        </property>
+        <property name="mobileOwner" type="string">
+            <column name="MobileOwner" length="50" />
+        </property>
+        <property name="email" type="string">
+            <column name="Email" length="100" />
+        </property>
+        <property name="addressHouse2" type="string">
+            <column name="AddressHouse2" length="50" />
+        </property>
+        <property name="addressStreet2" type="string">
+            <column name="AddressStreet2" length="50" />
+        </property>
+        <property name="addressSector2" type="string">
+            <column name="AddressSector2" length="50" />
+        </property>
+        <property name="addressColony2" type="string">
+            <column name="AddressColony2" length="50" />
+        </property>
+        <property name="addressTown2" type="string">
+            <column name="AddressTown2" length="50" />
+        </property>
+        <property name="addressUc2" type="string">
+            <column name="AddressUC2" length="50" />
+        </property>
+        <property name="addressLandMark2" type="string">
+            <column name="AddressLandMark2" />
+        </property>
+        <property name="city2" type="string">
+            <column name="City2" length="50" />
+        </property>
+        <property name="country2" type="string">
+            <column name="Country2" length="50" />
+        </property>
+        <property name="region2" type="string">
+            <column name="Region2" length="50" />
+        </property>
+        <property name="phone2" type="string">
+            <column name="Phone2" length="20" />
+        </property>
+        <property name="mobile2" type="string">
+            <column name="Mobile2" length="20" />
+        </property>
+        <property name="email2" type="string">
+            <column name="Email2" length="100" />
+        </property>
+        <property name="locationLat" type="java.lang.Float">
+            <column name="LocationLat" precision="12" scale="0" />
+        </property>
+        <property name="locationLon" type="java.lang.Float">
+            <column name="LocationLon" precision="12" scale="0" />
+        </property>
+        <property name="locationLat2" type="java.lang.Float">
+            <column name="LocationLat2" precision="12" scale="0" />
+        </property>
+        <property name="locationLon2" type="java.lang.Float">
+            <column name="LocationLon2" precision="12" scale="0" />
+        </property>
+        <property name="meterNo" type="string">
+            <column name="MeterNo" length="10">
+                <comment>Electricity/Gas Meter number of residence</comment>
+            </column>
+        </property>
+        <property name="irdstructureNo" type="string">
+            <column name="IRDStructureNo" length="10">
+                <comment>For internal use of IRD</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
